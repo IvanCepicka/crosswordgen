@@ -13,3 +13,30 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+input {
+  font: 1.1rem var(--font-family);
+  color: black;
+  background-color: white;
+  border: solid 1px #ccc;
+  padding: 4px;
+  border-radius: 5px;
+  outline: none;
+}
+input:focus-visible {
+  outline: solid 2px blue;
+}
+
+button {
+  font: 1.1rem var(--font-family);
+  color: black;
+  background-color: #f8f8f8;
+  border: solid 1px #ccc;
+  padding: 4px 16px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+button:hover:not(:active) {
+  background-color: #eee;
+}
