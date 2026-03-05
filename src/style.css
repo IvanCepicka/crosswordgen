@@ -1,0 +1,15 @@
+@import url(https://fonts.bunny.net/css?family=roboto:400);
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --theme-color: blue;
+}
+
+body {
+  display: contents;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
