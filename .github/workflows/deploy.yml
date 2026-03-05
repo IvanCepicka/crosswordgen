@@ -29,3 +29,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
+          commit_message: 'Deploy app'
+          force_orphan: true
