@@ -2,12 +2,12 @@
   <div class="entry-edit">
     <div class="table">
       <div class="header">Word:</div>
-      <div class="header">Hint:</div>
+      <div class="header">Clue:</div>
       <div></div>
 
       <template v-for="(row, index) in rows" :key="index">
         <input class="word" v-model="row.word" placeholder="Word" />
-        <input class="hint" v-model="row.hint" placeholder="Hint" />
+        <input class="hint" v-model="row.hint" placeholder="Clue" />
         <button v-if="rows.length > 1" @click="removeRow(index)">Remove</button>
       </template>
     </div>

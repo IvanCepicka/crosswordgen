@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      crossword-layout-generator:
+        specifier: ^0.1.1
+        version: 0.1.1
       vue:
         specifier: ^3.5.25
         version: 3.5.29(typescript@5.9.3)
@@ -407,6 +410,9 @@ packages:
 
   alien-signals@3.1.2:
     resolution: {integrity: sha512-d9dYqZTS90WLiU0I5c6DHj/HcKkF8ZyGN3G5x8wSbslulz70KOxaqCT0hQCo9KOyhVqzqGojvNdJXoTumZOtcw==}
+
+  crossword-layout-generator@0.1.1:
+    resolution: {integrity: sha512-wunaTcpzDc1UL7iC77ckh4mMEjFuBDMYIKhJn3yq6b7jvHu5zcxe17cGh4Pv1VbLu1BfC6kgDV0IowfqDUm2sg==}
 
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
@@ -811,6 +817,8 @@ snapshots:
       vue: 3.5.29(typescript@5.9.3)
 
   alien-signals@3.1.2: {}
+
+  crossword-layout-generator@0.1.1: {}
 
   csstype@3.2.3: {}
 
