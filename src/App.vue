@@ -33,6 +33,7 @@ const rows = ref([{ word: '', hint: '' }])
   gap: 10px;
 }
 .preview {
+  width: 600px;
   margin: 10px;
 }
 </style>

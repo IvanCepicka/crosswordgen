@@ -2,6 +2,12 @@
   <canvas ref="canvasRef" :width="canvasSize" :height="canvasSize"></canvas>
 </template>
 
+<style scoped>
+canvas {
+  width: 600px;
+}
+</style>
+
 <script setup lang="ts">
 import { ref, watch, onMounted } from 'vue'
 // @ts-ignore
@@ -12,7 +18,7 @@ type Row = { word: string; hint: string }
 const props = defineProps<{ words: Row[]; solved?: boolean }>()
 
 const canvasRef = ref<HTMLCanvasElement | null>(null)
-const canvasSize = 600
+const canvasSize = 1000
 const gridPadding = 20
 let layout: any = null
 
@@ -83,34 +89,21 @@ function drawLayout() {
     })
   })
 
-  const columns = 3
   const clueMargin = 10
   const clueFontSize = cellSize * 0.3
 
   const clues = layout.result.filter((r: any) => r.position)
-  const perCol = Math.ceil(clues.length / columns)
+  let clueY = gridPadding + rows * cellSize + 20
 
   ctx.font = `${clueFontSize}px Arial`
   ctx.textAlign = 'left'
   ctx.textBaseline = 'top'
   ctx.fillStyle = 'black'
 
-  for (let col = 0; col < columns; col++) {
-    const clueX =
-      gridPadding +
-      col * ((canvasSize - gridPadding * 2) / columns) +
-      clueMargin
-    let clueY = gridPadding + rows * cellSize + 20
-
-    for (let i = 0; i < perCol; i++) {
-      const idx = col * perCol + i
-      if (idx >= clues.length) break
-
-      const entry = clues[idx]
-      ctx.fillText(`${entry.position}. ${entry.clue}`, clueX, clueY)
-      clueY += clueFontSize * 1.2
-    }
-  }
+  clues.forEach((w: any, i: number) => {
+    ctx.fillText(`${i + 1}. ${w.clue}`, 50, clueY)
+    clueY += cellSize * 0.4
+  })
 
   layout.result
     .filter((r: any) => r.position)
