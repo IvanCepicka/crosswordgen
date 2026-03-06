@@ -89,7 +89,6 @@ function drawLayout() {
     })
   })
 
-  const clueMargin = 10
   const clueFontSize = cellSize * 0.3
 
   const clues = layout.result.filter((r: any) => r.position)
